@@ -16,5 +16,30 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             InitializeComponent();
         }
+
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            ExecutaCalculo();
+        }
+
+        private void txtValorDolar_Leave(object sender, EventArgs e)
+        {
+            ExecutaCalculo();
+        }
+
+        void ExecutaCalculo()
+        {
+            decimal cotacaoDolar;
+            decimal valorDolar;
+            decimal totalConvetido;
+
+            cotacaoDolar = decimal.Parse(txtCotacaoDolar.Text);
+            valorDolar = decimal.Parse(txtValorDolar.Text);
+            totalConvetido = cotacaoDolar * valorDolar;
+            txtConversor.Text = totalConvetido.ToString("N2");
+
+            lblResultado.Text = "O Resultado é " + totalConvetido.ToString("N");
+        }
     }
 }

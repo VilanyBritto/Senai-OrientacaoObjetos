@@ -29,46 +29,101 @@
         private void InitializeComponent()
         {
             this.lblCotacaoDolar = new System.Windows.Forms.Label();
-            this.lbllerValorDolar = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblValorDolar = new System.Windows.Forms.Label();
+            this.lblConversorDolar = new System.Windows.Forms.Label();
+            this.lblResultado = new System.Windows.Forms.Label();
+            this.txtConversor = new System.Windows.Forms.TextBox();
+            this.txtValorDolar = new System.Windows.Forms.TextBox();
+            this.txtCotacaoDolar = new System.Windows.Forms.TextBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCotacaoDolar
             // 
             this.lblCotacaoDolar.AutoSize = true;
-            this.lblCotacaoDolar.Location = new System.Drawing.Point(74, 101);
+            this.lblCotacaoDolar.Location = new System.Drawing.Point(55, 128);
             this.lblCotacaoDolar.Name = "lblCotacaoDolar";
-            this.lblCotacaoDolar.Size = new System.Drawing.Size(98, 15);
+            this.lblCotacaoDolar.Size = new System.Drawing.Size(199, 20);
             this.lblCotacaoDolar.TabIndex = 0;
-            this.lblCotacaoDolar.Text = "Cotação do dólar";
+            this.lblCotacaoDolar.Text = "Informe valor  do dólar hoje:";
             // 
-            // lbllerValorDolar
+            // lblValorDolar
             // 
-            this.lbllerValorDolar.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace;
-            this.lbllerValorDolar.AutoSize = true;
-            this.lbllerValorDolar.Location = new System.Drawing.Point(90, 144);
-            this.lbllerValorDolar.Name = "lbllerValorDolar";
-            this.lbllerValorDolar.Size = new System.Drawing.Size(64, 15);
-            this.lbllerValorDolar.TabIndex = 1;
-            this.lbllerValorDolar.Text = "Valor Dolar";
+            this.lblValorDolar.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace;
+            this.lblValorDolar.AutoSize = true;
+            this.lblValorDolar.Location = new System.Drawing.Point(85, 173);
+            this.lblValorDolar.Name = "lblValorDolar";
+            this.lblValorDolar.Size = new System.Drawing.Size(165, 20);
+            this.lblValorDolar.TabIndex = 1;
+            this.lblValorDolar.Text = "Informe valor em dólar:";
             // 
-            // label3
+            // lblConversorDolar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(99, 200);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Conversor de valor";
+            this.lblConversorDolar.AutoSize = true;
+            this.lblConversorDolar.Location = new System.Drawing.Point(113, 216);
+            this.lblConversorDolar.Name = "lblConversorDolar";
+            this.lblConversorDolar.Size = new System.Drawing.Size(133, 20);
+            this.lblConversorDolar.TabIndex = 2;
+            this.lblConversorDolar.Text = "Conversor para R$:";
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Location = new System.Drawing.Point(163, 272);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(78, 20);
+            this.lblResultado.TabIndex = 3;
+            this.lblResultado.Text = "Resultado:";
+            // 
+            // txtConversor
+            // 
+            this.txtConversor.Location = new System.Drawing.Point(241, 212);
+            this.txtConversor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtConversor.Name = "txtConversor";
+            this.txtConversor.Size = new System.Drawing.Size(114, 27);
+            this.txtConversor.TabIndex = 5;
+            // 
+            // txtValorDolar
+            // 
+            this.txtValorDolar.Location = new System.Drawing.Point(241, 163);
+            this.txtValorDolar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtValorDolar.Name = "txtValorDolar";
+            this.txtValorDolar.Size = new System.Drawing.Size(114, 27);
+            this.txtValorDolar.TabIndex = 6;
+            this.txtValorDolar.Leave += new System.EventHandler(this.txtValorDolar_Leave);
+            // 
+            // txtCotacaoDolar
+            // 
+            this.txtCotacaoDolar.Location = new System.Drawing.Point(241, 117);
+            this.txtCotacaoDolar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCotacaoDolar.Name = "txtCotacaoDolar";
+            this.txtCotacaoDolar.Size = new System.Drawing.Size(114, 27);
+            this.txtCotacaoDolar.TabIndex = 7;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(261, 309);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(94, 29);
+            this.btnCalcular.TabIndex = 8;
+            this.btnCalcular.Text = "button1";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // frmCotacaoDoDolar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lbllerValorDolar);
+            this.ClientSize = new System.Drawing.Size(554, 372);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.txtCotacaoDolar);
+            this.Controls.Add(this.txtValorDolar);
+            this.Controls.Add(this.txtConversor);
+            this.Controls.Add(this.lblResultado);
+            this.Controls.Add(this.lblConversorDolar);
+            this.Controls.Add(this.lblValorDolar);
             this.Controls.Add(this.lblCotacaoDolar);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCotacaoDoDolar";
             this.Text = "frmCotacaoDoDolar";
             this.ResumeLayout(false);
@@ -79,7 +134,12 @@
         #endregion
 
         private Label lblCotacaoDolar;
-        private Label lbllerValorDolar;
-        private Label label3;
+        private Label lblValorDolar;
+        private Label lblConversorDolar;
+        private Label lblResultado;
+        private TextBox txtConversor;
+        private TextBox txtValorDolar;
+        private TextBox txtCotacaoDolar;
+        private Button btnCalcular;
     }
 }
