@@ -112,7 +112,7 @@
             // 
             // frmCotacaoDoDolar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 279);
             this.Controls.Add(this.btnCalcularResultado);
@@ -123,6 +123,7 @@
             this.Controls.Add(this.lblConversorDolar);
             this.Controls.Add(this.lblValorDolar);
             this.Controls.Add(this.lblCotacaoDolar);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCotacaoDoDolar";
             this.Text = "frmCotacaoDoDolar";
             this.ResumeLayout(false);
