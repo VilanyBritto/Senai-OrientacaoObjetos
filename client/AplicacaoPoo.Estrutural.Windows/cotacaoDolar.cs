@@ -12,13 +12,11 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class frmCotacaoDoDolar : Form
     {
-        //abaixo variável global
-        private bool CotacaoEhValido; //Controla visibilidade de propriedades e classe e não método.
-        private bool ValorEmDolarEhValido; // Sempre que o método for Bool a afirmação inicial é falsa
+
         public frmCotacaoDoDolar()
         {
-            InitializeComponent();
-            HabilitarOuDesabilitarBotaoCalcularConversao();
+            InitializeComponent(); // esse inicialize vai iniciar tudo o que o compoe.
+            btnCalcularResultado.Enabled = true;
         }
 
 
@@ -35,83 +33,56 @@ namespace AplicacaoPoo.Estrutural.Windows
         * O método tem retorno quando permite retornar algum valor ex: sting, double, decimal (public string, private string, string)
        */
         {
-            decimal cotacaoDolar;
-            decimal valorDolar;
-            decimal totalConvetido;
 
-            cotacaoDolar = decimal.Parse(txtCotacaoDolar.Text);
-            valorDolar = decimal.Parse(txtValorDolar.Text);
-            totalConvetido = cotacaoDolar * valorDolar;
-            txtConversor.Text = totalConvetido.ToString("N2");
+            var valorEmDolar = decimal.Parse(txtValorDolar.Text);
+            var moeda = new ConverterMoedaService();
+            var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
 
-            lblMostarResultado.Text = "O Resultado é " + totalConvetido.ToString("N2");
+            //string interpolation
+            MessageBox.Show($"Valor convertido é: {resultado}em dolares");
+
         }
 
-        private void txtCotacaoDolar_TextChanged(object sender, EventArgs e) //analisa se o que digitou é valido ou não
-        {
-            try // try cath é tratamento de erro
-            {
-                var CalcularResultado = decimal.Parse(txtCotacaoDolar.Text);
-                CotacaoEhValido = true;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-                // btnCalcularResultado.Enabled=true;
-                //Enable é habilitar o botão 
 
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Digite um valor numérico");
-                txtCotacaoDolar.Focus(); //textchanged precisa ser aplicado aí
-                CotacaoEhValido = false;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-
-            }
-        }
 
         private void txtValorDolar_TextChanged(object sender, EventArgs e)
         {
             try
             {
+                if(txtValorDolar.Text == "")
+                {
+                    btnCalcularResultado.Enabled = false;
+                    return;
+                }
                 var CalcularResultado = decimal.Parse(txtValorDolar.Text);
-                ValorEmDolarEhValido = true;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-                // 
-                //btnCalcularResultado.Enabled = true;
-
+                btnCalcularResultado.Enabled = true;
 
             }
             catch (Exception)
             {
                 MessageBox.Show("A cotação do dólar é um valor decimal");
-                txtCotacaoDolar.Focus();
-                ValorEmDolarEhValido = false;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
+                txtValorDolar.Focus();
+                btnCalcularResultado.Enabled = false;
 
                 //MessageBox.Show(x.Message + ". \nContate o suporte!");
                 //textchanged precisa ser aplicado aí 
                 //  MessageBox.Show("Digite um valor numérico");
 
             }
-        }
-        //private void txtValorDolar_Leave(object sender, EventArgs e)
-        /*Leave é um evento que irá execultar o método ExecutaCalculo() quando a caixa de texto perder o foco 
-        /* (exemplo clicar na próxima caixa)
-        {
-            ExecutaCalculo();
-        }*/
-        private void HabilitarOuDesabilitarBotaoCalcularConversao()
-        {
-            if (ValorEmDolarEhValido && CotacaoEhValido)
-            {
-                btnCalcularResultado.Enabled = true;
-            }
-            else
-            {
-                btnCalcularResultado.Enabled = false;
-            }
+
         }
 
-    
+        private void txtValorDolar_Leave(object sender, EventArgs e)
+        {
+            //private void txtValorDolar_Leave(object sender, EventArgs e)
+            /*Leave é um evento que irá execultar o método ExecutaCalculo() quando a caixa de texto perder o foco 
+            /* (exemplo clicar na próxima caixa)
+            {
+                ExecutaCalculo();
+            }*/
+
+
+        }
     }
 }
         
