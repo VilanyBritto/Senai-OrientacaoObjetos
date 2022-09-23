@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.lblValorDolar = new System.Windows.Forms.Label();
-            this.lblMostarResultado = new System.Windows.Forms.Label();
-            this.txtValorDolar = new System.Windows.Forms.TextBox();
-            this.btnCalcularResultado = new System.Windows.Forms.Button();
+            this.lblSegundoValor = new System.Windows.Forms.Label();
+            this.txtValorEmDolar = new System.Windows.Forms.TextBox();
+            this.lblPrimeiroValor = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblValorDolar
@@ -44,45 +44,48 @@
             this.lblValorDolar.TabIndex = 1;
             this.lblValorDolar.Text = "Informe valor em dólar:";
             // 
-            // lblMostarResultado
+            // lblSegundoValor
             // 
-            this.lblMostarResultado.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblMostarResultado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblMostarResultado.Location = new System.Drawing.Point(42, 183);
-            this.lblMostarResultado.Name = "lblMostarResultado";
-            this.lblMostarResultado.Size = new System.Drawing.Size(244, 31);
-            this.lblMostarResultado.TabIndex = 3;
-            this.lblMostarResultado.Text = "Descrição do resultado:";
+            this.lblSegundoValor.AutoSize = true;
+            this.lblSegundoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSegundoValor.ForeColor = System.Drawing.Color.White;
+            this.lblSegundoValor.Location = new System.Drawing.Point(12, 68);
+            this.lblSegundoValor.Name = "lblSegundoValor";
+            this.lblSegundoValor.Size = new System.Drawing.Size(0, 26);
+            this.lblSegundoValor.TabIndex = 10;
             // 
-            // txtValorDolar
+            // txtValorEmDolar
             // 
-            this.txtValorDolar.Location = new System.Drawing.Point(200, 93);
-            this.txtValorDolar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtValorDolar.Name = "txtValorDolar";
-            this.txtValorDolar.Size = new System.Drawing.Size(88, 23);
-            this.txtValorDolar.TabIndex = 1;
-            this.txtValorDolar.TextChanged += new System.EventHandler(this.txtValorDolar_TextChanged);
-            this.txtValorDolar.Leave += new System.EventHandler(this.txtValorDolar_Leave);
+            this.txtValorEmDolar.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtValorEmDolar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtValorEmDolar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtValorEmDolar.Location = new System.Drawing.Point(12, 115);
+            this.txtValorEmDolar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtValorEmDolar.Name = "txtValorEmDolar";
+            this.txtValorEmDolar.PlaceholderText = "valor";
+            this.txtValorEmDolar.Size = new System.Drawing.Size(184, 22);
+            this.txtValorEmDolar.TabIndex = 1;
+            this.txtValorEmDolar.TextChanged += new System.EventHandler(this.txtValorDolar_TextChanged);
             // 
-            // btnCalcularResultado
+            // lblPrimeiroValor
             // 
-            this.btnCalcularResultado.Location = new System.Drawing.Point(200, 147);
-            this.btnCalcularResultado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCalcularResultado.Name = "btnCalcularResultado";
-            this.btnCalcularResultado.Size = new System.Drawing.Size(88, 24);
-            this.btnCalcularResultado.TabIndex = 8;
-            this.btnCalcularResultado.Text = "Calcular";
-            this.btnCalcularResultado.UseVisualStyleBackColor = true;
-            this.btnCalcularResultado.Click += new System.EventHandler(this.btnCalcularResultado_Click);
+            this.lblPrimeiroValor.AutoSize = true;
+            this.lblPrimeiroValor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrimeiroValor.ForeColor = System.Drawing.Color.White;
+            this.lblPrimeiroValor.Location = new System.Drawing.Point(12, 34);
+            this.lblPrimeiroValor.Name = "lblPrimeiroValor";
+            this.lblPrimeiroValor.Size = new System.Drawing.Size(0, 19);
+            this.lblPrimeiroValor.TabIndex = 9;
             // 
             // frmCotacaoDoDolar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 236);
-            this.Controls.Add(this.btnCalcularResultado);
-            this.Controls.Add(this.txtValorDolar);
-            this.Controls.Add(this.lblMostarResultado);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(417, 262);
+            this.Controls.Add(this.lblSegundoValor);
+            this.Controls.Add(this.lblPrimeiroValor);
+            this.Controls.Add(this.txtValorEmDolar);
             this.Controls.Add(this.lblValorDolar);
             this.Name = "frmCotacaoDoDolar";
             this.Text = "frmCotacaoDoDolar";
@@ -93,8 +96,8 @@
 
         #endregion
         private Label lblValorDolar;
-        private Label lblMostarResultado;
-        private TextBox txtValorDolar;
-        private Button btnCalcularResultado;
+        internal Label lblSegundoValor;
+        private TextBox txtValorEmDolar;
+        private Label lblPrimeiroValor;
     }
 }
