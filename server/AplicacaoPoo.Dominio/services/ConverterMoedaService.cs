@@ -22,7 +22,6 @@ namespace AplicacaoPoo.Dominio.services
         {
             return valor * CotacaoDolar;
         }
-
         public decimal ConverterLibrasEmReal (decimal valor)
         {
             return valor * CotacaoLibra;
