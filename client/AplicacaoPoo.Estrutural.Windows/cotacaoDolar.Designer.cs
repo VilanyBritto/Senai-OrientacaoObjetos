@@ -39,9 +39,9 @@
             // 
             this.lblValorDolar.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace;
             this.lblValorDolar.AutoSize = true;
-            this.lblValorDolar.Location = new System.Drawing.Point(14, 236);
+            this.lblValorDolar.Location = new System.Drawing.Point(12, 177);
             this.lblValorDolar.Name = "lblValorDolar";
-            this.lblValorDolar.Size = new System.Drawing.Size(165, 20);
+            this.lblValorDolar.Size = new System.Drawing.Size(131, 15);
             this.lblValorDolar.TabIndex = 1;
             this.lblValorDolar.Text = "Informe valor em dólar:";
             // 
@@ -50,9 +50,9 @@
             this.lblSegundoValor.AutoSize = true;
             this.lblSegundoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSegundoValor.ForeColor = System.Drawing.Color.White;
-            this.lblSegundoValor.Location = new System.Drawing.Point(14, 91);
+            this.lblSegundoValor.Location = new System.Drawing.Point(12, 68);
             this.lblSegundoValor.Name = "lblSegundoValor";
-            this.lblSegundoValor.Size = new System.Drawing.Size(0, 31);
+            this.lblSegundoValor.Size = new System.Drawing.Size(0, 26);
             this.lblSegundoValor.TabIndex = 10;
             // 
             // txtValorEmDolar
@@ -60,10 +60,11 @@
             this.txtValorEmDolar.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtValorEmDolar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtValorEmDolar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtValorEmDolar.Location = new System.Drawing.Point(14, 269);
+            this.txtValorEmDolar.Location = new System.Drawing.Point(12, 202);
+            this.txtValorEmDolar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtValorEmDolar.Name = "txtValorEmDolar";
             this.txtValorEmDolar.PlaceholderText = "valor";
-            this.txtValorEmDolar.Size = new System.Drawing.Size(210, 27);
+            this.txtValorEmDolar.Size = new System.Drawing.Size(184, 22);
             this.txtValorEmDolar.TabIndex = 1;
             this.txtValorEmDolar.TextChanged += new System.EventHandler(this.txtValorDolar_TextChanged);
             // 
@@ -72,9 +73,9 @@
             this.lblPrimeiroValor.AutoSize = true;
             this.lblPrimeiroValor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPrimeiroValor.ForeColor = System.Drawing.Color.White;
-            this.lblPrimeiroValor.Location = new System.Drawing.Point(14, 45);
+            this.lblPrimeiroValor.Location = new System.Drawing.Point(12, 34);
             this.lblPrimeiroValor.Name = "lblPrimeiroValor";
-            this.lblPrimeiroValor.Size = new System.Drawing.Size(0, 23);
+            this.lblPrimeiroValor.Size = new System.Drawing.Size(0, 19);
             this.lblPrimeiroValor.TabIndex = 9;
             // 
             // cboxValorPossivelConversao
@@ -82,27 +83,26 @@
             this.cboxValorPossivelConversao.FormattingEnabled = true;
             this.cboxValorPossivelConversao.Items.AddRange(new object[] {
             "Dolar Americano",
-            " Libras Esterlinas",
-            " Euro"});
-            this.cboxValorPossivelConversao.Location = new System.Drawing.Point(14, 190);
+            "Euro",
+            "Libras Esterlinas"});
+            this.cboxValorPossivelConversao.Location = new System.Drawing.Point(12, 142);
+            this.cboxValorPossivelConversao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboxValorPossivelConversao.Name = "cboxValorPossivelConversao";
-            this.cboxValorPossivelConversao.Size = new System.Drawing.Size(210, 28);
+            this.cboxValorPossivelConversao.Size = new System.Drawing.Size(184, 23);
             this.cboxValorPossivelConversao.TabIndex = 11;
-            this.cboxValorPossivelConversao.Text = "[Escolha Moeda]";
             this.cboxValorPossivelConversao.SelectedValueChanged += new System.EventHandler(this.cboxValorPossivelConversao_SelectedValueChanged);
             // 
             // frmCotacaoDoDolar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(477, 349);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(417, 262);
             this.Controls.Add(this.cboxValorPossivelConversao);
             this.Controls.Add(this.lblSegundoValor);
             this.Controls.Add(this.lblPrimeiroValor);
             this.Controls.Add(this.txtValorEmDolar);
             this.Controls.Add(this.lblValorDolar);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCotacaoDoDolar";
             this.Text = "frmCotacaoDoDolar";
             this.ResumeLayout(false);
