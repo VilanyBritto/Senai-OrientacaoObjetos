@@ -30,5 +30,19 @@ namespace AplicacaoPoo.Estrutural.Windows
             var form = new frmControleComissao();
             form.Show();
         }
+
+        private void cONVERSORDEMOEDASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmCotacaoDoDolar();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void cOMISSIONAMENTOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmControleComissao();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
