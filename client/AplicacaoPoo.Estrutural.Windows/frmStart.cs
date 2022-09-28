@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace AplicacaoPoo.Estrutural.Windows
 {
-    public partial class frmStatic : Form
+    public partial class frmStart : Form
     {
-        public frmStatic()
+        public frmStart()
         {
             InitializeComponent();
         }
 
-        private void timerLoading_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
             timerLoading.Enabled = true;
             progressBarLoading.Increment(2);
