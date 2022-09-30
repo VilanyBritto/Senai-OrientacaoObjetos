@@ -21,23 +21,29 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             string vendedor;
             int codigo;
-            Double vlrUnitario;
+            Double valorUnitario;
             Double qtd;
 
             vendedor = txtNomeVendedor.Text;
             codigo = int.Parse(txtCodigoDaPeca.Text);
-            vlrUnitario = Double.Parse(txtPrecoUnitario.Text);
-            txtPrecoUnitario.Text = vlrUnitario.ToString("N2");
+            valorUnitario = Double.Parse(txtPrecoUnitario.Text);
+            txtPrecoUnitario.Text = valorUnitario.ToString("N2");
             qtd = Double.Parse(txtQuantidade.Text);
 
             //lblComissao.Text = "Comissão: " + vendedor;
 
-            lblResultado.Text += "Vendedor: " + vendedor + "\nCódigo do produto vendido: " + codigo+"\nQuantidade: " +qtd + "\nComissão total: " + ((vlrUnitario * qtd)* 0.05).ToString("N2")+"\n";
-           // txtCodigoDaPeca.Text = "";
-           // txtPrecoUnitario.Text = "";
-           // txtQuantidade.Text = "";
+            lblResultado.Text = $"Vendedor: {vendedor} \nCódigo do produto vendido: {codigo} \nQuantidade: {qtd} \nComissão total: {((valorUnitario * qtd) * 0.05).ToString("N2")} \n ";
+            #region MEU PROGRAMA
+            // txtCodigoDaPeca.Text = "";
+            // txtPrecoUnitario.Text = "";
+            // txtQuantidade.Text = "";
+            #endregion
             txtCodigoDaPeca.Focus(); // O comando Focus() nesta linha é para direcionar o cursos para o campo txtCodigoDaPeca sempre que preencher o ultimo campo solicitado.
         }
 
+        private void frmControleComissao_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
