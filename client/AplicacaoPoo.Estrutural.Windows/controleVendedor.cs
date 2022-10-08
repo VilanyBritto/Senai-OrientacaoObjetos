@@ -25,8 +25,7 @@ namespace AplicacaoPoo.Estrutural.Windows
         private void lblDescricaoProduto_Click(object sender, EventArgs e)
         {
             var dadosPedido = new VendedorService();
-            dadosPedido = 
-                             
+                                         
         }
     }
 
